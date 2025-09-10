@@ -36,7 +36,9 @@ function convertUrl() {
         const mirrorUrl = convertToMirror(inputUrl);
         
         if (mirrorUrl) {
-            showResult(mirrorUrl);
+            showResult(mirrorUrl, inputUrl);
+            // Clear input field for next use
+            urlInput.value = '';
         } else {
             showError('Не удалось преобразовать URL');
         }
@@ -71,12 +73,14 @@ function convertToMirror(originalUrl) {
     }
 }
 
-function showResult(mirrorUrl) {
+function showResult(mirrorUrl, originalUrl) {
     const resultDiv = document.getElementById('result');
     const mirrorLink = document.getElementById('mirrorLink');
+    const originalUrlDiv = document.getElementById('originalUrl');
     
     mirrorLink.href = mirrorUrl;
     mirrorLink.textContent = mirrorUrl;
+    originalUrlDiv.textContent = 'Исходная ссылка: ' + originalUrl;
     resultDiv.style.display = 'block';
 }
 
