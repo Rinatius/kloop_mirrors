@@ -11,6 +11,7 @@ This is a simple web application called "Зеркало Клоопа" (Kloop Mir
 - Set up static file server for development and testing
 - **Updated**: Added support for second domain (ky.kloop.asia) with multi-domain validation
 - **Enhanced UX**: Input field auto-clears after conversion and displays original URL for reference
+- **Copy functionality**: Added subtle copy button with icon for easy mirror link copying
 
 # User Preferences
 
