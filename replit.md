@@ -10,6 +10,7 @@ This is a simple web application called "Зеркало Клоопа" (Kloop Mir
 - Created mobile-friendly interface with Russian language support
 - Set up static file server for development and testing
 - **Updated**: Added support for second domain (ky.kloop.asia) with multi-domain validation
+- **Enhanced UX**: Input field auto-clears after conversion and displays original URL for reference
 
 # User Preferences
 
