@@ -17,9 +17,9 @@ function convertUrl() {
         return;
     }
     
-    // Check if it's a valid kloop.kg URL
-    if (!inputUrl.includes('kloop.kg')) {
-        showError('URL должен быть с сайта kloop.kg');
+    // Check if it's a valid kloop URL
+    if (!inputUrl.includes('kloop.kg') && !inputUrl.includes('ky.kloop.asia')) {
+        showError('URL должен быть с сайта kloop.kg или ky.kloop.asia');
         return;
     }
     
@@ -27,8 +27,8 @@ function convertUrl() {
         const url = new URL(inputUrl);
         
         // Validate domain
-        if (url.hostname !== 'kloop.kg') {
-            showError('URL должен быть с домена kloop.kg');
+        if (url.hostname !== 'kloop.kg' && url.hostname !== 'ky.kloop.asia') {
+            showError('URL должен быть с домена kloop.kg или ky.kloop.asia');
             return;
         }
         
