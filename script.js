@@ -51,17 +51,19 @@ function convertToMirror(originalUrl) {
         // Remove protocol (https://)
         let path = originalUrl.replace(/^https?:\/\//, '');
         
-        // Replace all forward slashes with hyphens
-        path = path.replace(/\//g, '-');
+        // Split into domain and path parts
+        let parts = path.split('/');
+        let domain = parts[0]; // 'kloop.kg'
+        let pathParts = parts.slice(1); // ['blog', '2025', '08', '28', '...']
         
-        // Remove trailing slash if it creates a trailing hyphen
-        path = path.replace(/-$/, '');
+        // Join path parts with hyphens, keeping domain separate
+        let mirrorPath = domain + '/' + pathParts.join('-');
         
-        // Add .html extension
-        path = path + '.html';
+        // Remove any trailing hyphen and add .html
+        mirrorPath = mirrorPath.replace(/-$/, '') + '.html';
         
         // Construct mirror URL
-        const mirrorUrl = 'https://storage.googleapis.com/qurium/' + path;
+        const mirrorUrl = 'https://storage.googleapis.com/qurium/' + mirrorPath;
         
         return mirrorUrl;
     } catch (e) {
