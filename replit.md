@@ -9,6 +9,7 @@ This is a simple web application called "Зеркало Клоопа" (Kloop Mir
 - Added URL conversion logic that transforms kloop.kg URLs to mirror format
 - Created mobile-friendly interface with Russian language support
 - Set up static file server for development and testing
+- **Updated**: Added support for second domain (ky.kloop.asia) with multi-domain validation
 
 # User Preferences
 
